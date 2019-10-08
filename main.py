@@ -26,10 +26,10 @@ def get_jitter_amount(data_slice, epsilon, chunks):
     return j
 
 
-def privizor(data, privacy_loss, chunks = 10000, data_keys=[], options={}, str_change=0.25):
+def privizor(data, epsilon, chunks = 10000, data_keys=[], options={}, str_change=0.25):
     printed = False
     for i in range(len(data)):
-        jitters = get_jitter_amount(data[i], privacy_loss, chunks)
+        jitters = get_jitter_amount(data[i], epsilon, chunks)
         if type(data[i]) is dict:
             for key, value in data[i].items():
                 if type(value) is str:
