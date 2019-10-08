@@ -1,5 +1,5 @@
 # privizor
-A library for apply mathematically rigorous "jittering" to data in order to counteract the implications database reconstruction theorem.
+A library for apply mathematically rigorous "jittering" to data in order to counteract the implications of the database reconstruction theorem.
 
 ## Usage
 **data = privizor(data, epsilon, chunks = 10000, options = {}, data_keys = [], str_change = 0.25)**
