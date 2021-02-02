@@ -12,7 +12,6 @@ def get_jitter_amount(data_slice, epsilon, chunks):
         for key, _ in data_slice.items():
             j[key] = 0
             keys.append(key)
-        
         for c in range(chunks):
             noise = pnoise1(random.random() * 1000000)
             j[keys[floor(noise * len(data_slice))]] += chunk_amount
@@ -24,7 +23,6 @@ def get_jitter_amount(data_slice, epsilon, chunks):
             j[floor(noise * len(data_slice))] += chunk_amount
 
     return j
-
 
 def privizor(data, epsilon, chunks = 10000, data_keys=[], options={}, str_change=0.25):
     printed = False
